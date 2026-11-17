@@ -1,0 +1,15 @@
+{
+  "name": "@lekalo/typescript-hono",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT OR Apache-2.0",
+  "exports": {
+    "./*": "./src/*"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "hono-compatibility.json"
+  ],
+  "repository": "https://github.com/ichinya/lekalo-typescript-hono"
+}
