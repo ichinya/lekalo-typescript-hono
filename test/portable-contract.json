@@ -1,0 +1,6 @@
+{
+  "runtime": "gh/ichinya/lekalo-typescript#1c69191ab36bd9d0b220a6ad274a66bc6bab7836",
+  "path": "app.ts",
+  "valid": "import { Hono } from 'hono'; const app = new Hono(); app.get('/health', c => c.text('ok'));",
+  "invalid": "import { Hono } from 'hono'; const app = new Hono();"
+}
