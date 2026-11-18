@@ -1,0 +1,10 @@
+{
+  "schema": "lekalo/package/v1",
+  "id": "lekalo-typescript-hono",
+  "version": "0.2.0",
+  "kind": "rules",
+  "files": [
+    "contracts/http.json"
+  ],
+  "rules": "contracts/http.json"
+}

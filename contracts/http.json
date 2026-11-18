@@ -1,0 +1,56 @@
+{
+  "schema": "lekalo/contract-rules/v1",
+  "requires": [
+    "http.routes/v1"
+  ],
+  "bindings": {
+    "typescript.static-router/v1": {
+      "files": [
+        "app.ts",
+        "index.ts",
+        "src/index.ts"
+      ],
+      "module": "hono",
+      "export": "Hono",
+      "methods": {
+        "get": "GET",
+        "post": "POST",
+        "put": "PUT",
+        "patch": "PATCH",
+        "delete": "DELETE",
+        "options": "OPTIONS"
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "health-route",
+      "schema": {
+        "type": "object",
+        "required": [
+          "routes"
+        ],
+        "properties": {
+          "routes": {
+            "type": "array",
+            "contains": {
+              "type": "object",
+              "required": [
+                "method",
+                "path"
+              ],
+              "properties": {
+                "method": {
+                  "const": "GET"
+                },
+                "path": {
+                  "const": "/health"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -7,3 +7,7 @@ The `src/` modules are runtime integrations, consumed through explicit package e
 Run package tests with `node --test adapters/node-typescript/test/hono-*.test.mjs`. Compiler/host integration tests require `LEKALO_TYPESCRIPT_ROOT` pointing to a built TypeScript runtime checkout. No application code or package lifecycle scripts are executed.
 
 The TypeScript runtime's release build pins this package and includes the selected integration in its distribution. That distribution belongs to the runtime repository, not Lekalo core. Adding another language runtime requires no change to the core.
+
+## Portable rules
+
+Select `gh/ichinya/lekalo-typescript-hono` in the component rules. The package supplies `contracts/http.json` for `http.routes/v1`. This opt-in check requires GET /health. The binding describes direct registrations in the listed entry files.
